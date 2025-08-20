@@ -91,7 +91,3 @@ This project's deployment uses the following services:
   * **Database**: The MongoDB database is managed by MongoDB Atlas's free tier, simplifying setup and maintenance.
 
 -----
-
-### Author
-
-  * **[Your Name]** - [Your GitHub Profile Link]
