@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+A strong `README.md` file is crucial for a GitHub repository. It's the first thing people see and acts as your project's welcome page and documentation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here is a template for your project's `README.md` file. You can copy and paste this into a file named `README.md` in your project's root directory and fill in the details.
 
-## Available Scripts
+-----
 
-In the project directory, you can run:
+### Project Title
 
-### `npm start`
+# MERN Stack Student Authentication on AWS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-----
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Description
 
-### `npm test`
+This project is a full-stack student authentication system built with the **MERN** (MongoDB, Express.js, React, Node.js) stack and deployed on the **AWS Cloud**. It features a secure login and registration process for students using their unique PRN (Permanent Registration Number) and a password.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The purpose of this project is to demonstrate an end-to-end deployment workflow for a MERN application using the AWS Free Tier, showcasing skills in cloud services, API development, and frontend-backend integration.
 
-### `npm run build`
+-----
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * **Student Authentication**: Secure login and registration for students.
+  * **API**: A RESTful API built with Express.js and Node.js for handling authentication requests.
+  * **Database**: Uses MongoDB to store student data, including PRN and hashed passwords.
+  * **Responsive UI**: A simple and clean login form built with React.
+  * **Cloud Deployment**: The backend is hosted on an **Amazon EC2** instance, and the database is managed by **MongoDB Atlas**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-----
 
-### `npm run eject`
+### Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * **Frontend**:
+      * React
+      * Axios (for API calls)
+  * **Backend**:
+      * Node.js
+      * Express.js
+      * bcrypt.js (for password hashing)
+      * jsonwebtoken (JWT) (for authentication)
+  * **Database**:
+      * MongoDB (hosted on MongoDB Atlas)
+  * **Cloud & DevOps**:
+      * AWS EC2
+      * Git & GitHub
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-----
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Prerequisites
 
-## Learn More
+  * Node.js (LTS version)
+  * npm (comes with Node.js)
+  * A MongoDB Atlas account (free tier is sufficient)
+  * An AWS account (with AWS Free Tier access)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
+2.  **Backend Setup:**
+    ```bash
+    cd backend
+    npm install
+    ```
+    Create a `.env` file in the `backend` directory with your MongoDB connection string:
+    ```
+    MONGO_URI="your_mongodb_atlas_connection_string"
+    ```
+3.  **Frontend Setup:**
+    ```bash
+    cd ../frontend
+    npm install
+    ```
+    Update the API endpoint in `frontend/src/Login.js` to point to your deployed backend's URL.
+    ```javascript
+    const response = await axios.post('http://<your-ec2-public-ip>:<your-api-port>/api/auth/login', ...);
+    ```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-----
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project's deployment uses the following services:
 
-### `npm run build` fails to minify
+  * **Backend**: The Node.js/Express.js API is deployed on an AWS EC2 `t2.micro` instance using a process manager like PM2.
+  * **Database**: The MongoDB database is managed by MongoDB Atlas's free tier, simplifying setup and maintenance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-----
+
+### Author
+
+  * **[Your Name]** - [Your GitHub Profile Link]
