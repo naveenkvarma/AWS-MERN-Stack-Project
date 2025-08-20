@@ -1,9 +1,3 @@
-A strong `README.md` file is crucial for a GitHub repository. It's the first thing people see and acts as your project's welcome page and documentation.
-
-Here is a template for your project's `README.md` file. You can copy and paste this into a file named `README.md` in your project's root directory and fill in the details.
-
------
-
 ### Project Title
 
 # MERN Stack Student Authentication on AWS
